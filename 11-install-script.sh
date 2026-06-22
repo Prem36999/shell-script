@@ -7,21 +7,47 @@ then
     echo "ERROR:: you must have sudo access to execute thescript"  
     exit 1 #other than 0
 fi
-
-dnf install mysql -y
+dnf list installed mysql
 if [ $? -ne 0 ]
-then 
-   echo "installing MSQL ...   FAILURE"
-   exit 1   
+  dnf install mysql -y
+  if [ $? -ne 0 ]
+  then
+     echo "installing MYSQL ... FAILURE"
+     exit 1
+  else
+     echo "installing MYSQL... SUCCESS"
+  fi
 else 
-   echo "installing MYQL...  SUCCESS"
+   echo "MYSQL is Allredy installed"
 fi
 
-dnf install gitt -y
+# if [ $? -ne 0 ]
+# #   then
+# #      echo "installing MYSQL ... FAILURE"
+# #      exit 1
+# #   else
+# #      echo "installing MYSQL... SUCCESS"
+#  fi
+dnf list installed git
 if [ $? -ne 0 ]
-then
-    echo "installing GIT ...  FAILURE"    
-    exit 1 
-else
-    echo "installing GIT... SUCCESS" 
-fi       
+
+  dnf install git -y
+  if [ $? -ne 0 ]
+  then
+      echo "installing GIT ...  FAILURE"    
+      exit 1 
+  else
+      echo "installing GIT... SUCCESS" 
+  fi       
+else 
+  echo "GIT is allredy installed"
+fi  
+
+
+# if [ $? -ne 0 ]
+#   then
+#      echo "installing GIT ... FAILURE"
+#      exit 1
+#   else
+#      echo "installing GIT... SUCCESS"
+#   fi
