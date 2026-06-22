@@ -17,7 +17,7 @@ if [ $? -ne 0 ]
   else
      echo "installing MYSQL... SUCCESS"
   fi
- else
+else
    echo "MYSQL is Allredy installed"
 fi
 
