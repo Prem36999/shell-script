@@ -11,3 +11,4 @@ exit 1 #other than 0
 
 dnf install mysql -y
 
+dnf install git -y
