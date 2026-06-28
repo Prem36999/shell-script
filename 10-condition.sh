@@ -10,7 +10,7 @@ if [ $NUMBER -gt 100 ]
 then 
   echo -e "given number is greatar than $G 100"
 else
-  echo -e"given number is less than or equal to $R 100"
+  echo -e "given number is less than or equal to $R 100"
 fi    
 
 MARKS=$2
