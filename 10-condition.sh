@@ -8,3 +8,11 @@ then
 else
   echo "given number is less than or equal to 100"
 fi    
+
+MARKS=$2
+if [ $MARKS -le 35 ]
+then
+  echo "pass"
+else 
+  echo "fail"
+fi
