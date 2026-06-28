@@ -9,7 +9,7 @@ SUM=$(($NUMBER3+$NUMBER2))
 echo "SUM of $NUMBER3 and $NUMBER2 is:: $SUM"
 
 
-A=5
-B=300
-SUM=$((A%B))
+A=5000
+B=10
+SUM=$((A/B))
 echo "SUM =$SUM"
