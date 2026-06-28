@@ -10,7 +10,7 @@ else
 fi    
 
 MARKS=$2
-if [ $MARKS -le 35 ]
+if [ $MARKS -ge 35 ]
 then
   echo "pass"
 else 
