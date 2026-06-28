@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER1=$3
+NUMBER3=$3
 NUMBER2=$2
 
 TIMESTAMP=$(date)
