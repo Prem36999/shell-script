@@ -18,5 +18,5 @@ if [ $MARKS -ge 35 ]
 then
   echo -e "ravi is  $G pass $N "
 else 
-  echo -e $R "ravi is fail $N "
+  echo -e  "ravi is $R fail $N "
 fi
