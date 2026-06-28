@@ -1,10 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
@@ -17,13 +13,13 @@ then
   dnf install mysql -y
   if [ $? -ne 0 ]
   then
-     echo -e "installing MYSQL ...$R FAILURE $N "
+     echo  "installing MYSQL ... FAILURE  "
      exit 1
   else
-     echo -e "installing MYSQL...$G SUCCESS $N "
+     echo  "installing MYSQL... SUCCESS  "
   fi
 else
-   echo -e $G "MYSQL is Allredy installed $N "
+   echo  "MYSQL is Allredy installed "
 fi
 
 # if [ $? -ne 0 ]

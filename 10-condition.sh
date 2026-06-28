@@ -1,30 +1,29 @@
 #!/bin/bash
 
 NUMBER=$1
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
 # -gt , -lt , -eq , -ge , -le
 if [ $NUMBER -gt 100 ]
 then 
-  echo -e "given number is greatar than $G 100 $N "
+  echo  "given number is greatar than  100 "
 else
-  echo -e "given number is less than or equal to $R 100 $N "
+  echo  "given number is less than or equal to  100  "
 fi    
 
 MARKS=$2
 if [ $MARKS -ge 35 ]
 then
-  echo -e "ravi is  $G passed $N "
+  echo -e "ravi is   passed  "
 else 
-  echo -e  "ravi is $R failed $N "
+  echo -e  "ravi is  failed  "
 fi
 
-JOB=$3
-if [ $JOB -gt 75 ]
+MARKS=$3
+if [ $MARKS -ge 90 ]
 then
-   echo -e "prem got the job $G sucuussully $N "
-else
-  echo -e "prem did not got the job $Y hold on $N "
+  echo " A grade"
+  elif [ $MARKS -ge 75 ]
+  then 
+   echo "B grade"
+   else 
+   echo " C grade"
   fi
