@@ -27,3 +27,4 @@ then
    echo -e "prem got the job $G sucuussully $N "
 else
   echo -e "prem did not got the job $Y hold on $N "
+  fi
