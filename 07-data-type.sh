@@ -1,9 +1,9 @@
 #!/bin/bash
 
-NUMBER1=$1
+NUMBER1=$3
 NUMBER2=$2
 
 TIMESTAMP=$(date)
 echo "script ececuted at:: $TAIMESTAMP"
-SUM=$(($NUMBER1+$NUMBER2))
-echo "SUM of $NUMBER1 and $NUMBER2 is:: $SUM"
+SUM=$(($NUMBER3+$NUMBER2))
+echo "SUM of $NUMBER3 and $NUMBER2 is:: $SUM"
