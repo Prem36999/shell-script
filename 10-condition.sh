@@ -26,4 +26,4 @@ if [ $JOB -gt 75 ]
 then
    echo -e "prem got the job $G sucuussully $N "
 else
-  echo -e "prem did not got the job $Y hold on $N "   
+  echo -e "prem did not got the job $Y hold on $N "
