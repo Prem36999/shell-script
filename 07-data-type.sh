@@ -12,4 +12,4 @@ echo "SUM of $NUMBER3 and $NUMBER2 is:: $SUM"
 A=20
 B=30
 SUM=$((A+B))
-echo "SUM =$sum"
+echo "SUM =$SUM"
