@@ -1,18 +1,22 @@
 #!/bin/bash
 
 NUMBER=$1
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 # -gt , -lt , -eq , -ge , -le
 if [ $NUMBER -gt 100 ]
 then 
-  echo "given number is greatar than 100"
+  echo -e "given number is greatar than $G 100"
 else
-  echo "given number is less than or equal to 100"
+  echo -e"given number is less than or equal to $R 100"
 fi    
 
 MARKS=$2
 if [ $MARKS -ge 35 ]
 then
-  echo "pass"
+  echo -e $G "pass"
 else 
-  echo "fail"
+  echo -e $R "fail"
 fi
