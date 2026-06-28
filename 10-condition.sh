@@ -20,3 +20,10 @@ then
 else 
   echo -e  "ravi is $R failed $N "
 fi
+
+JOB=$3
+if [ $JOB -gt 75 ]
+then
+   echo -e "prem got the job $G sucuussully $N "
+else
+  echo -e "prem did not got the job $Y hold on $N "   
