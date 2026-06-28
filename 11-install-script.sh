@@ -1,10 +1,14 @@
 #!/bin/bash
 
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
-    echo "ERROR:: you must have sudo access to execute thescript"  
+    echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
 fi
 dnf list installed mysql
@@ -13,13 +17,13 @@ then
   dnf install mysql -y
   if [ $? -ne 0 ]
   then
-     echo "installing MYSQL ... FAILURE"
+     echo -e "installing MYSQL ...$R FAILURE $N "
      exit 1
   else
-     echo "installing MYSQL... SUCCESS"
+     echo -e "installing MYSQL...$G SUCCESS $N "
   fi
 else
-   echo "MYSQL is Allredy installed"
+   echo -e $G "MYSQL is Allredy installed $N "
 fi
 
 # if [ $? -ne 0 ]
