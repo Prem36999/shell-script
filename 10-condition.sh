@@ -8,15 +8,15 @@ N="\e[0m"
 # -gt , -lt , -eq , -ge , -le
 if [ $NUMBER -gt 100 ]
 then 
-  echo -e "given number is greatar than $G 100"
+  echo -e "given number is greatar than $G 100 $N "
 else
-  echo -e "given number is less than or equal to $R 100"
+  echo -e "given number is less than or equal to $R 100 $N "
 fi    
 
 MARKS=$2
 if [ $MARKS -ge 35 ]
 then
-  echo -e "RAVI IS  $G pass"
+  echo -e "RAVI IS  $G pass $N "
 else 
-  echo -e $R "fail"
+  echo -e $R "fail $N "
 fi
