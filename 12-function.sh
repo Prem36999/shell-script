@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-VALIDATE(){ 
+PREM(){ 
     if [ $1 -ne 0 ]
   then
      echo  "$2 ... FAILURE"
@@ -19,23 +19,23 @@ then
 fi
 
 
- dnf list installed mysql
+dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
   dnf install mysql -y
-  VALIDATE $? "installing MSQL" 
+  PREM $? "installing MSQL" 
 else
    echo  "MYSQL is Allredy installed"
 fi
 
 
- dnf list installed git
+dnf list installed git
 
 if [ $? -ne 0 ]
 then
   dnf install git -y
-  VALIDATE $? "installing GIT" 
+  PREM $? "installing GIT" 
 else 
   echo "GIT is allredy installed"
 fi
