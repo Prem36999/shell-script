@@ -33,7 +33,7 @@ if [ $? -ne 0 ]
   dnf install mysql -y &>>$LOG_FILE_NAME
   PREM $? "installing MSQL" 
 else
-   echo -e $Y  "MYSQL is Allredy installed $N " &>>$LOG_FILE_NAME
+   echo -e $Y  "MYSQL is Allredy installed $N "
 fi
 
 
@@ -44,5 +44,5 @@ if [ $? -ne 0 ]
   dnf install git -y &>>$LOG_FILE_NAME
   PREM $? "installing GIT" 
 else 
-  echo -e $Y "GIT is allredy installed $N  " &>>$LOG_FILE_NAME
+  echo -e $Y "GIT is allredy installed $N  " 
 fi
