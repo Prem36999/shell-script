@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-LOG_FOLDER="/var/log/shellscript-log"
+LOG_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cat -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
@@ -18,7 +18,7 @@ PREM(){
   fi
 }
 
-echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE
+echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
 
@@ -28,24 +28,24 @@ then
 fi
 
 
-dnf list installed mysql &>>$LOG_FILE
+dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 
 then
-  dnf install mysql -y &>>$LOG_FILE
+  dnf install mysql -y &>>$LOG_FILE_NAME
   PREM $? "installing MSQL" 
 else
    echo -e   "MYSQL is Allredy $Y INSTALLED $N "
 fi
 
 
-dnf list installed git  &>>$LOG_FILEE
+dnf list installed git  &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 
 then
-  dnf install git -y &>>$LOG_FILE
+  dnf install git -y &>>$LOG_FILE_NAME
 
   PREM $? "installing GIT" 
 else 
