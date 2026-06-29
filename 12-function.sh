@@ -33,4 +33,4 @@ then
  PREM $? "installing GIT" 
 else 
   echo "GIT is allredy installed"
-fi  
+fi
