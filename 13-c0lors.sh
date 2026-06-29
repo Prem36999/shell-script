@@ -41,5 +41,5 @@ then
   dnf install git -y
   PREM $? "installing GIT" 
 else 
-  echo -e $Y "GIT is allredy installed $N  "
+  echo -e $Y "GIT is allredy installed $N "
 fi

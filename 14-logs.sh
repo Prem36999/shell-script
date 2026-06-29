@@ -6,8 +6,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 LOG_FOLDER="/var/log/shellscript-log"
-LOG_FILE=$( echo $0 | cat -d "." -f1 )
-TIMESTAMP=$( date +%Y-%m-%d-H-%M-%S )
+LOG_FILE=$(echo $0 | cat -d "." -f1)
+TIMESTAMP=$(date +%Y-%m-%d-H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP"
 
 PREM(){ 
@@ -21,8 +21,9 @@ PREM(){
 }
 
 echo "script started executing at: $TIMESTAMP" &>>LOG_FILE_NAMDE
+
 if [ $USERID -ne 0 ]
-then
+ then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
 fi
@@ -31,7 +32,7 @@ fi
 dnf list installed mysql &>>LOG_FILE_NAME
 
 if [ $? -ne 0 ]
-then
+ then
   dnf install mysql -y &>>LOG_FILE_NAME
   PREM $? "installing MSQL" 
 else
@@ -42,7 +43,7 @@ fi
 dnf list installed git  &>>LOG_FILE_NAME
 
 if [ $? -ne 0 ]
-then
+ then
   dnf install git -y &>>LOG_FILE_NAME
   PREM $? "installing GIT" 
 else 
