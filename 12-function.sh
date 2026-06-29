@@ -20,7 +20,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then
   dnf install mysql -y
-PREM $? "installing MSQL" 
+  PREM $? "installing MSQL" 
 else
    echo  "MYSQL is Allredy installed"
 fi
@@ -30,7 +30,7 @@ dnf list installed git
 if [ $? -ne 0 ]
 then
   dnf install git -y
- PREM $? "installing GIT" 
+  PREM $? "installing GIT" 
 else 
   echo "GIT is allredy installed"
 fi
