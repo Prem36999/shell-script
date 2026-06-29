@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-PREM(){
+VALIDATE(){ 
     if [ $1 -ne 0 ]
   then
      echo  "$2 ... FAILURE"
@@ -16,21 +16,24 @@ if [ $USERID -ne 0 ]
 then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
+
 dnf list installed mysql
+
 if [ $? -ne 0 ]
 then
   dnf install mysql -y
-  PREM $? "installing MSQL" 
+  VALIDATE $? "installing MSQL" 
 else
    echo  "MYSQL is Allredy installed"
 fi
 
 
 dnf list installed git
+
 if [ $? -ne 0 ]
 then
   dnf install git -y
-  PREM $? "installing GIT" 
+  VALIDATE $? "installing GIT" 
 else 
   echo "GIT is allredy installed"
 fi
