@@ -44,5 +44,5 @@ if [ $? -ne 0 ]
   dnf install git -y &>>$LOG_FILE_NAME
   PREM $? "installing GIT" 
 else 
-  echo -e $Y "GIT is allredy installed $N  " &>>LOG_FILE_NAME
+  echo -e $Y "GIT is allredy installed $N  " &>>$LOG_FILE_NAME
 fi
