@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {0..12}
+for i in {0..123}
 do 
   echo $i
 done
