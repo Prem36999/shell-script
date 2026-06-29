@@ -19,7 +19,7 @@ then
 fi
 
 
-dnf list installed mysql
+ dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
@@ -30,7 +30,7 @@ else
 fi
 
 
-dnf list installed git
+ dnf list installed git
 
 if [ $? -ne 0 ]
 then
