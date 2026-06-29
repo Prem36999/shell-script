@@ -11,5 +11,6 @@ echo "SUM of $NUMBER3 and $NUMBER2 is:: $SUM"
 
 A=$3
 B=$4
-SUM=$((A+B))
+SUM=$((A-B))
 echo "SUM OF A AND B IS :: =$SUM"
+ 
