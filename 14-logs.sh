@@ -20,6 +20,7 @@ PREM(){
   fi
 }
 
+echo "script started executing at: $TIMESTAMP" &>>LOG_FILE_NAMDE
 if [ $USERID -ne 0 ]
 then
     echo "ERROR:: you must have sudo access to execute the script"  
