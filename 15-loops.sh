@@ -31,4 +31,5 @@ do
  VALIDATE $? "inatalling $package "
  else
  echo -e "$package is allrady $Y.... INSTALLLED $N"
+ fi 
 done
