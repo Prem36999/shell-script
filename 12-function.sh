@@ -1,18 +1,15 @@
 #!/bin/bash
 
 USERID=$(id -u)
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
+
 
 PREM(){ 
     if [ $1 -ne 0 ]
   then
-     echo -e "$2 ...$R FAILURE $N "
+     echo  "$2 ... FAILURE  "
      exit 1
   else
-     echo -e  "$2... $G SUCCESS $N "
+     echo   "$2...  SUCCESS "
   fi
 }
 
@@ -30,7 +27,7 @@ then
   dnf install mysql -y
   PREM $? "installing MSQL" 
 else
-   echo -e $G  "MYSQL is Allredy installed $N "
+   echo  "MYSQL is Allredy installed "
 fi
 
 
@@ -41,5 +38,5 @@ then
   dnf install git -y
   PREM $? "installing GIT" 
 else 
-  echo -e $G "GIT is allredy installed $N "
+  echo  "GIT is allredy installed "
 fi
