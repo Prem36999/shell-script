@@ -34,5 +34,3 @@ then
 else 
   echo "GIT is allredy installed"
 fi  
-
-
