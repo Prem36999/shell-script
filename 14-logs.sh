@@ -22,7 +22,7 @@ echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
 
-then
+ then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
 fi
@@ -32,7 +32,7 @@ dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 
-then
+ then
   dnf install mysql -y &>>$LOG_FILE_NAME
   PREM $? "installing MSQL" 
 else
@@ -44,7 +44,7 @@ dnf list installed git  &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 
-then
+ then
   dnf install git -y &>>$LOG_FILE_NAME
 
   PREM $? "installing GIT" 
