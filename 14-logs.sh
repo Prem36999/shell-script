@@ -20,7 +20,8 @@ PREM(){
 echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
- then
+
+then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
 fi
@@ -29,20 +30,22 @@ fi
 dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
- then
+
+then
   dnf install mysql -y &>>$LOG_FILE_NAME
   PREM $? "installing MSQL" 
 else
-   echo -e $Y  "MYSQL is Allredy installed $N "
+   echo -e   "MYSQL is Allredy $Y INSTALLED $N "
 fi
 
 
 dnf list installed git  &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
- then
+
+then
   dnf install git -y &>>$LOG_FILE_NAME
   PREM $? "installing GIT" 
 else 
-  echo -e $Y "GIT is allredy installed $N  " 
+  echo -e  "GIT is allredy $Y INSTALLED $N  " 
 fi
