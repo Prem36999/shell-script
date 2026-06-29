@@ -5,10 +5,10 @@ USERID=$(id -u)
 PREM(){
     if [ $1 -ne 0 ]
   then
-     echo  "$2 ... FAILURE  "
+     echo  "$2 ... FAILURE"
      exit 1
   else
-     echo  "$2... SUCCESS  "
+     echo  "$2... SUCCESS"
   fi
 }
 
@@ -22,7 +22,7 @@ then
   dnf install mysql -y
 PREM $? "installing MSQL" 
 else
-   echo  "MYSQL is Allredy installed "
+   echo  "MYSQL is Allredy installed"
 fi
 
 
