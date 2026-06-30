@@ -22,14 +22,17 @@ VALIDATE(){
   fi
 }
 
-echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
-if [ $USERID -ne 0 ]
-
-then
+CHECK_ROOT(){
+ if [ $USERID -ne 0 ]
+ then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
-fi
+ fi
+}
+ 
+  echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+CHECK_ROOT
 
 for package in $@ 
 do
