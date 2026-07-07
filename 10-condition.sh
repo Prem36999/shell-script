@@ -12,9 +12,9 @@ fi
 MARKS=$2
 if [ $MARKS -ge 35 ]
 then
-  echo -e "ravi is   passed  "
+  echo "ravi is   passed  "
 else 
-  echo -e  "ravi is  failed  "
+  echo  "ravi is  failed  "
 fi
 
 MARKS=$3
