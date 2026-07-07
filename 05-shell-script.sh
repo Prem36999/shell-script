@@ -4,4 +4,4 @@
 
  read -s USERNAME
  
- echo "username entered: $USERNAME"
+ echo "username entered: $USERNAME "

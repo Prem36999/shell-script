@@ -20,17 +20,13 @@ VALIDATE(){
 }
 
  echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
- if [ $USERID -ne 0 ]
- then
+if [ $USERID -ne 0 ]
+then
     echo "ERROR:: you must have sudo access to execute the script"  
     exit 1 #other than 0
- fi
+fi
 
  
-  
-
-
-
 for package in $@ 
 do
  dnf list installed $package &>>$LOG_FILE_NAME
