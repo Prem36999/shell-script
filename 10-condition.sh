@@ -5,12 +5,13 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+
 # -gt , -lt , -eq , -ge , -le
 if [ $NUMBER -gt 100 ]
 then 
   echo -e "given number is $G greatar than  100 $N "
 else
-  echo  "given number is $Y less than or equal to  100 $N "
+  echo  "given number is $R less than or equal to  100 $N "
 fi    
 
 MARKS=$2
