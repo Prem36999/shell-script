@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-PREM(){ 
+VALIDATE(){ 
     if [ $1 -ne 0 ]
   then
      echo -e "$2 ... $R FAILURE $N "
@@ -28,7 +28,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then
   dnf install mysql -y
-  PREM $? "installing MSQL" 
+  VALIDATE $? "installing MSQL" 
 else
    echo -e $Y  "MYSQL is Allredy installed $N "
 fi
@@ -39,7 +39,16 @@ dnf list installed git
 if [ $? -ne 0 ]
 then
   dnf install git -y
-  PREM $? "installing GIT" 
+  VALIDATE $? "installing GIT" 
 else 
   echo -e $Y "GIT is allredy installed $N "
 fi
+
+dnf list installed nginx
+
+if [ $? -ne 0 ]
+then 
+dnf install nginx -y 
+VALIDATE $? "INSTALLING NGINX"
+elce
+ echo -e $Y " nginx allredy installed $N"
