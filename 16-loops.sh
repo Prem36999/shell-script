@@ -35,7 +35,7 @@ do
      dnf install $package -y &>>$LOG_FILE_NAME
     VALIDATE $? "installing $package"
     else 
-     echo -e "$package allredy $Y ...INSTALLED  $N" 
+     echo -e "$package allredy $Y ...INSTALLED $N" 
     fi
 
 done 
