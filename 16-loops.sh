@@ -32,7 +32,7 @@ do
  dnf list installed $package &>>$LOG_FILE_NAME
   if [ $? -ne 0 ]
   then 
-     dnf install $package -y 
+     dnf install $package -y &>>$LOG_FILE_NAME
     VALIDATE $? "installing $package"
     else 
      echo -e "$package allredy $Y ...INSTALLED $N" 
