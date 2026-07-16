@@ -48,7 +48,9 @@ dnf list installed nginx
 
 if [ $? -ne 0 ]
 then 
-dnf install nginx -y 
-VALIDATE $? "INSTALLING NGINX"
-elce
+  dnf install nginx -y 
+  VALIDATE $? "INSTALLING NGINX"
+
+else
  echo -e $Y " nginx allredy installed $N"
+ fi
